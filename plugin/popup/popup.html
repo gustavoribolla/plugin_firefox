@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacidade — Score & Bloqueio</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Privacidade</h1>
+      <div class="score"><span id="score">--</span></div>
+
+      <div class="controls">
+        <label><input type="checkbox" id="toggle-block" /> Bloquear</label>
+        <label><input type="checkbox" id="toggle-builtins" /> Bloquear lista embutida</label>
+        <label><input type="checkbox" id="toggle-1p" /> Bloquear 1ª parte</label>
+        <button id="btn-block-host">Bloquear host atual</button>
+        <button id="btn-allow-host">Permitir host atual</button>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Requisições</h2>
+          <p><b>1ª parte:</b> <span id="fp">0</span></p>
+          <p><b>3ª parte:</b> <span id="tp">0</span></p>
+          <p><b>bloqueadas:</b> <span id="blocked">0</span></p>
+        </div>
+        <div class="card">
+          <h2>Cookies</h2>
+          <p><b>1ª parte:</b> <span id="ck-fp">0</span></p>
+          <p><b>3ª parte:</b> <span id="ck-tp">0</span></p>
+          <p>sessão: <span id="ck-sess">0</span></p>
+          <p>persistente: <span id="ck-persist">0</span></p>
+        </div>
+        <div class="card">
+          <h2>Storage</h2>
+          <p>local: <span id="st-local">0</span></p>
+          <p>session: <span id="st-session">0</span></p>
+          <p>IndexedDB: <span id="st-idb">0</span></p>
+        </div>
+        <div class="card">
+          <h2>Canvas FP</h2>
+          <p id="canvas-flag">--</p>
+        </div>
+        <div class="card">
+          <h2>Trackers</h2>
+          <p>1ª parte: <span id="trk-1p">0</span></p>
+          <p>3ª parte: <span id="trk-3p">0</span></p>
+        </div>
+        <div class="card" style="grid-column: span 2;">
+          <h2>Relatório (Top 5 — 3ª parte)</h2>
+          <ul id="top-hosts" class="list"></ul>
+          <a id="open-options" href="#" title="Gerenciar listas">Gerenciar listas…</a>
+        </div>
+      </div>
+
+      <p class="hint">Abra um site e recarregue para ver os contadores.</p>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

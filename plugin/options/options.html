@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Opções — Bloqueio e Listas</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 20px; }
+      h1 { font-size: 20px; margin-bottom: 8px; }
+      h2 { font-size: 16px; margin-top: 16px; }
+      .row { display: flex; gap: 8px; margin: 4px 0; }
+      input[type=text] { flex: 1; padding: 6px; }
+      button { padding: 6px 10px; }
+      ul { padding-left: 18px; }
+      li { margin: 2px 0; }
+      .muted { color: #555; }
+      .toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+    </style>
+  </head>
+  <body>
+    <h1>Bloqueio e listas</h1>
+    <div class="toggles">
+      <label><input type="checkbox" id="cfg-enabled" /> Bloquear</label>
+      <label><input type="checkbox" id="cfg-builtins" /> Bloquear lista embutida</label>
+      <label><input type="checkbox" id="cfg-1p" /> Bloquear 1ª parte</label>
+    </div>
+
+    <h2>Allowlist (permitir)</h2>
+    <div class="row">
+      <input id="allow-input" type="text" placeholder="domínio ou eTLD+1 (ex.: exemplo.com)" />
+      <button id="allow-add">Adicionar</button>
+    </div>
+    <ul id="allow-list"></ul>
+
+    <h2>Blocklist (bloquear)</h2>
+    <div class="row">
+      <input id="block-input" type="text" placeholder="domínio ou eTLD+1 (ex.: tracker.com)" />
+      <button id="block-add">Adicionar</button>
+    </div>
+    <ul id="block-list"></ul>
+
+    <p class="muted">As alterações são salvas automaticamente.</p>
+
+    <script src="options.js"></script>
+  </body>
+</html>
