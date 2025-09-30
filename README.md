@@ -20,7 +20,7 @@
 
 ---
 
-## 2) Como Demonstrar (Roteiro Sugerido)
+## 2) Como Demonstrar (Sugestão)
 
 1. **Cenário 3ª parte + bloqueio**  
    - Abra um portal de notícias, dê **F5** e mostre: **1ª/3ª parte** no popup.  
@@ -107,7 +107,7 @@ plugin/
 ├─ popup/
 │  ├─ popup.html/css/js         # UI principal (score, contadores, relatório, toggles, atalhos)
 └─ options/
-   ├─ options.html/js           # UI de listas e toggles persistentes
+   └─ options.html/js           # UI de listas e toggles persistentes
 ```
 
 **Detalhes técnicos relevantes:**
@@ -225,3 +225,18 @@ Evitar que um único fator “estoure” a nota (ex.: páginas com centenas de r
 ## 11) Observações de Privacidade
 
 O plugin roda **localmente**, não envia dados para terceiros e exibe apenas **agregados por aba**. As listas personalizadas ficam no `browser.storage.local` do usuário.
+
+---
+
+## 12) Evidências (prints do plugin em uso)
+
+**1) Portal de notícias (UOL)**  
+
+![UOL](docs/uol.png)
+
+**2) Portal de notícias (CNN)**  
+
+![CNN](docs/cnn.png)
+
+**3) Amazon (logado)**    
+![Amazon](docs/amazon.png)
