@@ -1,5 +1,5 @@
 
-# Plugin de Privacidade - Entrega Completa (README + Relatório + Checklist)
+# Plugin de Privacidade - Entrega Completa
 
 > **Projeto:** Extensão Web (Firefox) para detecção e controle de riscos de privacidade durante a navegação.  
 > **Versão entregue:** Conceito **A** (inclui todos os requisitos de C e B).  
